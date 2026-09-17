@@ -1,0 +1,55 @@
+protocol:
+  name: post-stage-f-fairness-and-external-baseline-supplement
+  version: 1
+  status: prospective_supplement_after_stage_f
+  rationale: >-
+    Stage-G tests whether the matched Pure-PPO conclusion survives independent
+    PPO hyperparameter selection. Stage-H adds all six traditional baselines
+    named in the reference GIFT paper without selecting methods by outcome.
+  existing_stage_a_to_f_results_must_remain_locked: true
+
+stage_g:
+  method: ppo_test_only
+  llm_calls: 0
+  selection_dataset: portfolio_5stocks
+  train_period: ['2019-01-01', '2019-12-31']
+  held_out_validation_period: ['2020-01-01', '2020-06-30']
+  selection_seeds: [42, 123, 456]
+  search: sequential_ofat
+  parameter_order:
+    - epochs_per_update
+    - max_episodes
+    - actor_lr
+    - clip_epsilon
+    - entropy_coef
+  levels_per_parameter: 5
+  selection_objective: seed-averaged held-out PPO Sharpe
+  final_datasets: [portfolio_5stocks, portfolio_5stocks2]
+  final_windows: [W1, W2, W3, W4, W5, W6]
+  final_seeds: [42, 123, 456]
+  output: results/stage_g_tuned_ppo
+
+stage_h:
+  methods: [sma, wma, atr, bollinger, turn_of_month, xgboost]
+  main_text_representatives: [sma, bollinger, xgboost]
+  supplementary_methods: [wma, atr, turn_of_month]
+  deterministic_methods: [sma, wma, atr, bollinger, turn_of_month]
+  xgboost_seeds: [42, 123, 456]
+  parameter_source: config_traditional_baselines.yaml
+  output: results/stage_h_traditional_baselines
+
+stage_i:
+  primary_metric: sharpe
+  inferential_unit: dataset-window cell mean
+  confirmatory_contrasts:
+    - PBIR-GIFT versus Pure GIFT under cached code
+    - Pure GIFT versus PPO-Matched
+    - Pure GIFT versus PPO-Tuned
+  external_context_contrasts:
+    - Pure GIFT versus SMA
+    - Pure GIFT versus Bollinger Bands
+    - Pure GIFT versus XGBoost
+  correction: Holm across the six listed Sharpe contrasts
+  resamples: 10000
+  block_length: 20
+  output: results/stage_i_final_comparison

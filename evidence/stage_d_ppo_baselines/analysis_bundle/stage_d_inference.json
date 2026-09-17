@@ -1,0 +1,247 @@
+{
+  "analysis_role": "stage_d_baseline_comparison",
+  "complete_cells": 18,
+  "independent_cell_means": 6,
+  "primary_question": "Does the Stage-B Pure-GIFT pipeline outperform PPO-Train+FineTune on test Sharpe?",
+  "primary_supported": false,
+  "contrasts": {
+    "gift_pipeline_vs_ppo_train_plus_test": {
+      "first_method": "Pure GIFT (Stage B)",
+      "second_method": "PPO-Train+FineTune",
+      "mean_cell_delta_sharpe": 0.4697935542691381,
+      "median_cell_delta_sharpe": 0.44644598189817647,
+      "cell_win_rate": 1.0,
+      "seed_run_win_rate": 0.6666666666666666,
+      "hedges_g_paired": 1.0016220869585768,
+      "exact_one_sided_sign_flip_p": 0.015625,
+      "bootstrap": {
+        "resamples": 10000,
+        "block_length": 20,
+        "ci95": [
+          -0.03770221145277617,
+          1.123804551647769
+        ],
+        "probability_positive": 0.9644
+      },
+      "dataset_means": {
+        "portfolio_5stocks": 0.1803348680024263,
+        "portfolio_5stocks2": 0.7592522405358499
+      },
+      "window_means": {
+        "W1": 0.45832796208767834,
+        "W3": 0.303690746799929,
+        "W5": 0.6473619539198069
+      },
+      "mean_mdd_improvement_percentage_points": 0.615632371730482,
+      "holm_adjusted_p": 0.09375
+    },
+    "gift_pipeline_vs_ppo_test_only": {
+      "first_method": "Pure GIFT (Stage B)",
+      "second_method": "PPO-TestOnly",
+      "mean_cell_delta_sharpe": 0.30536849073828726,
+      "median_cell_delta_sharpe": 0.14285661569966934,
+      "cell_win_rate": 0.6666666666666666,
+      "seed_run_win_rate": 0.5555555555555556,
+      "hedges_g_paired": 0.4787185041819178,
+      "exact_one_sided_sign_flip_p": 0.15625,
+      "bootstrap": {
+        "resamples": 10000,
+        "block_length": 20,
+        "ci95": [
+          -0.21469672792381386,
+          1.011999970462323
+        ],
+        "probability_positive": 0.8772
+      },
+      "dataset_means": {
+        "portfolio_5stocks": 0.14415147458785152,
+        "portfolio_5stocks2": 0.46658550688872297
+      },
+      "window_means": {
+        "W1": 0.4982862349027997,
+        "W3": -0.12841890435520747,
+        "W5": 0.5462381416672695
+      },
+      "mean_mdd_improvement_percentage_points": 0.37220671053503923,
+      "holm_adjusted_p": 0.46875
+    },
+    "pbir_fixed_vs_ppo_train_plus_test": {
+      "first_method": "PBIR-GIFT (Stage C)",
+      "second_method": "PPO-Train+FineTune",
+      "mean_cell_delta_sharpe": 0.5260555025217509,
+      "median_cell_delta_sharpe": 0.44545849263675286,
+      "cell_win_rate": 1.0,
+      "seed_run_win_rate": 0.7777777777777778,
+      "hedges_g_paired": 1.1655906435270984,
+      "exact_one_sided_sign_flip_p": 0.015625,
+      "bootstrap": {
+        "resamples": 10000,
+        "block_length": 20,
+        "ci95": [
+          -0.08318860603605376,
+          1.1403843675281309
+        ],
+        "probability_positive": 0.9567
+      },
+      "dataset_means": {
+        "portfolio_5stocks": 0.25688022480423695,
+        "portfolio_5stocks2": 0.7952307802392649
+      },
+      "window_means": {
+        "W1": 0.44545849263675286,
+        "W3": 0.5762387458906935,
+        "W5": 0.5564692690378065
+      },
+      "mean_mdd_improvement_percentage_points": 0.7196384900124281,
+      "holm_adjusted_p": 0.09375
+    },
+    "pbir_fixed_vs_gift_fixed": {
+      "first_method": "PBIR-GIFT (Stage C)",
+      "second_method": "Pure GIFT (Stage C)",
+      "mean_cell_delta_sharpe": 0.36827139733962294,
+      "median_cell_delta_sharpe": 0.4266101903661659,
+      "cell_win_rate": 0.8333333333333334,
+      "seed_run_win_rate": 0.7222222222222222,
+      "hedges_g_paired": 1.2266816951963464,
+      "exact_one_sided_sign_flip_p": 0.03125,
+      "bootstrap": {
+        "resamples": 10000,
+        "block_length": 20,
+        "ci95": [
+          -0.05176688511592537,
+          0.7836427663029669
+        ],
+        "probability_positive": 0.953
+      },
+      "dataset_means": {
+        "portfolio_5stocks": 0.23428341114995158,
+        "portfolio_5stocks2": 0.5022593835292943
+      },
+      "window_means": {
+        "W1": 0.289858938033727,
+        "W3": 0.388345063618976,
+        "W5": 0.4266101903661659
+      },
+      "mean_mdd_improvement_percentage_points": 0.40562993460744323,
+      "holm_adjusted_p": 0.125
+    },
+    "gift_pipeline_vs_equal_weight": {
+      "first_method": "Pure GIFT (Stage B)",
+      "second_method": "Equal Weight",
+      "mean_cell_delta_sharpe": -0.15505024759192262,
+      "median_cell_delta_sharpe": -0.09836370805592712,
+      "cell_win_rate": 0.16666666666666666,
+      "seed_run_win_rate": 0.3333333333333333,
+      "hedges_g_paired": -0.7156781458948343,
+      "exact_one_sided_sign_flip_p": 0.96875,
+      "bootstrap": {
+        "resamples": 10000,
+        "block_length": 20,
+        "ci95": [
+          -0.462716855878829,
+          0.15137751932974175
+        ],
+        "probability_positive": 0.1691
+      },
+      "dataset_means": {
+        "portfolio_5stocks": -0.15982799719238655,
+        "portfolio_5stocks2": -0.15027249799145873
+      },
+      "window_means": {
+        "W1": -0.36711636086418364,
+        "W3": -0.031273234936414665,
+        "W5": -0.06676114697516958
+      },
+      "mean_mdd_improvement_percentage_points": 1.0264397524391262,
+      "holm_adjusted_p": 1.0
+    },
+    "pbir_fixed_vs_equal_weight": {
+      "first_method": "PBIR-GIFT (Stage C)",
+      "second_method": "Equal Weight",
+      "mean_cell_delta_sharpe": -0.09878829933930977,
+      "median_cell_delta_sharpe": -0.15765383185717,
+      "cell_win_rate": 0.3333333333333333,
+      "seed_run_win_rate": 0.4444444444444444,
+      "hedges_g_paired": -0.27012857407167196,
+      "exact_one_sided_sign_flip_p": 0.765625,
+      "bootstrap": {
+        "resamples": 10000,
+        "block_length": 20,
+        "ci95": [
+          -0.4740252211761105,
+          0.2139538345468876
+        ],
+        "probability_positive": 0.2498
+      },
+      "dataset_means": {
+        "portfolio_5stocks": -0.0832826403905759,
+        "portfolio_5stocks2": -0.11429395828804366
+      },
+      "window_means": {
+        "W1": -0.37998583031510913,
+        "W3": 0.24127476415434979,
+        "W5": -0.15765383185717
+      },
+      "mean_mdd_improvement_percentage_points": 1.130445870721072,
+      "holm_adjusted_p": 1.0
+    }
+  },
+  "pbir_advantage_decision_from_locked_stage_c": {
+    "supported": false,
+    "mean_delta_sharpe": 0.36827139733962294,
+    "ci95": [
+      -0.05278320870954665,
+      0.7850472454553507
+    ]
+  },
+  "caveats": [
+    "D1 and D2 share three stocks and are not independent universes.",
+    "The analysis unit is the dataset-window cell mean, not each day.",
+    "Stage-C comparisons are conditional on Stage-B-selected code.",
+    "Equal-weight seed duplicates are descriptive only."
+  ],
+  "absolute_method_performance": {
+    "gift_stage_b": {
+      "method_label": "Pure GIFT (Stage B pipeline)",
+      "mean_across_six_cells": 0.9645261263070216,
+      "sd_across_six_cells": 1.8010079973801896,
+      "positive_cells": 4,
+      "best_cells": 0
+    },
+    "pbir_stage_c": {
+      "method_label": "PBIR-GIFT (Stage C fixed code)",
+      "mean_across_six_cells": 1.0207880745596343,
+      "sd_across_six_cells": 1.6261984879212779,
+      "positive_cells": 4,
+      "best_cells": 1
+    },
+    "gift_stage_c": {
+      "method_label": "Pure GIFT (Stage C fixed code)",
+      "mean_across_six_cells": 0.6525166772200114,
+      "sd_across_six_cells": 1.5045986709170176,
+      "positive_cells": 4,
+      "best_cells": 0
+    },
+    "ppo_train_plus_test": {
+      "method_label": "PPO (train + fine-tune)",
+      "mean_across_six_cells": 0.4947325720378835,
+      "sd_across_six_cells": 1.7125595676679817,
+      "positive_cells": 3,
+      "best_cells": 0
+    },
+    "ppo_test_only": {
+      "method_label": "PPO (test-period training)",
+      "mean_across_six_cells": 0.6591576355687342,
+      "sd_across_six_cells": 1.725253231393974,
+      "positive_cells": 3,
+      "best_cells": 1
+    },
+    "equal_weight": {
+      "method_label": "Equal Weight",
+      "mean_across_six_cells": 1.1195763738989444,
+      "sd_across_six_cells": 1.872519690527148,
+      "positive_cells": 4,
+      "best_cells": 4
+    }
+  }
+}

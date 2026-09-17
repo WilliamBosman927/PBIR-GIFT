@@ -1,0 +1,162 @@
+protocol:
+  name: PBIR-GIFT-two-stage-confirmatory-study
+  version: 2
+  frozen_before_final_results: true
+  primary_claim: >-
+    Under matched PPO settings, PBIR-GIFT improves out-of-sample Sharpe
+    relative to Pure GIFT in the two tested five-stock panels.
+  forbidden_claims:
+    - universal financial-market generalization
+    - elimination of reward hacking
+    - policy invariance after arbitrary shaping clipping
+
+datasets:
+  portfolio_5stocks:
+    tickers: [TSLA, NFLX, AMZN, MSFT, JNJ]
+    dates: ['2010-06-29', '2024-06-28']
+    observations: 3524
+    role: tuning panel and final panel D1
+  portfolio_5stocks2:
+    tickers: [MSFT, AMZN, JNJ, XOM, CAT]
+    dates: ['2010-06-29', '2024-06-28']
+    observations: 3524
+    role: final panel D2 only
+  dependence_note: >-
+    The panels share AMZN, MSFT, and JNJ; they are robustness panels rather
+    than fully independent datasets.
+
+stage_a:
+  config: config_tuning_D1_W1.yaml
+  dataset: portfolio_5stocks
+  train_period: ['2019-01-01', '2019-12-31']
+  held_out_validation_period: ['2020-01-01', '2020-06-30']
+  search: sequential_ofat
+  parameter_order:
+    - epochs_per_update
+    - max_episodes
+    - actor_lr
+    - clip_epsilon
+    - entropy_coef
+  levels_per_parameter: 5
+  paired_trials: 25
+  selection_objective: mean held-out Sharpe of PBIR-GIFT and Pure GIFT
+  output: selected_ppo.yaml
+
+stage_b:
+  datasets: [portfolio_5stocks, portfolio_5stocks2]
+  windows: [W1, W2, W3, W4, W5, W6]
+  confirmatory_non_overlapping_windows: [W1, W3, W5]
+  overlapping_robustness_windows: [W2, W4, W6]
+  primary_methods: [pbir, pure_gift]
+  frozen_fields:
+    - selected PPO parameters
+    - PPO gamma shared by PBIR gamma
+    - transaction cost
+    - seed
+    - adaptation/evaluation split
+  recommended_seeds: [42, 123, 456]
+  budget_seed: [42]
+
+comparison_experiment:
+  scope: confirmatory_non_overlapping_windows
+  methods:
+    - id: equal_weight
+      label: Equal Weight
+      question: Does learning add value over a deterministic portfolio?
+      llm_calls: false
+    - id: ppo_test_only
+      label: PPO-TestOnly
+      question: Does GIFT add value over PPO trained only on adaptation data?
+      llm_calls: false
+    - id: ppo_train_plus_test
+      label: PPO-Train+FineTune
+      question: Does GIFT add value over PPO with historical pretraining?
+      llm_calls: false
+    - id: state_gift
+      label: State-only GIFT
+      question: Is improvement explained by LLM state revision alone?
+      llm_calls: true
+    - id: pure_gift
+      label: Pure GIFT
+      question: What happens under direct LLM intrinsic reward?
+      llm_calls: true
+    - id: pbir
+      label: PBIR-GIFT
+      question: What is the full proposed method's performance?
+      llm_calls: true
+  launcher_flags:
+    - --include-equal-weight
+    - --include-ppo-baselines
+    - --include-state-gift
+
+ablation_experiment:
+  scope: [W1, W3, W5]
+  runner: frozen_ablation_runner.py
+  variants:
+    - pure_gift
+    - pbir_no_clip
+    - pbir_no_terminal
+    - pbir_no_rules
+    - pbir_full
+  interpretation: removal ablations, not cumulative additions
+
+outcomes:
+  primary:
+    name: test_sharpe
+    direction: higher
+  secondary:
+    - {name: test_sortino, direction: higher}
+    - {name: test_max_drawdown, direction: lower}
+    - {name: test_total_return, direction: higher}
+  diagnostics:
+    - LLM code validity rate
+    - shaping reward mean and standard deviation
+    - potential mean and standard deviation
+    - best iteration
+    - failure rate
+    - wall-clock seconds
+
+statistics:
+  pairing_keys: [dataset, window, seed]
+  primary_estimand: mean paired Sharpe difference PBIR-GIFT minus Pure GIFT
+  time_dependence: 20-trading-day moving-block bootstrap
+  bootstrap_resamples: 10000
+  confidence_interval: 95-percent percentile interval
+  cell_summary: mean across seeds within dataset-window
+  paired_sensitivity_test: exact sign-flip test on non-overlapping cell means
+  secondary_multiplicity: Holm correction
+  report:
+    - raw paired difference
+    - confidence interval
+    - Hedges g for paired cell means
+    - cell win rate
+    - exact adjusted p-values
+  caution: >-
+    W2/W4/W6 overlap W1/W3/W5 and are not counted as extra independent
+    confirmatory units.
+
+decision_rules:
+  support_primary:
+    - bootstrap 95-percent interval for Sharpe difference is above zero
+    - positive mean effect in both datasets
+    - positive effect in at least two of W1, W3, W5
+    - no material maximum-drawdown deterioration
+  material_drawdown_deterioration_percentage_points: 5.0
+  falsify_primary:
+    - primary interval includes zero or is negative
+    - either dataset has a negative mean Sharpe difference
+    - gain is accompanied by drawdown deterioration above the guardrail
+
+execution_tiers:
+  budget_core:
+    paired_experiments: 37
+    composition: 25 Stage-A plus 12 one-seed final pairs
+    estimated_a10_cost_cny: [233, 291]
+  thesis_core:
+    paired_experiments: 61
+    composition: 25 Stage-A plus 12 windows times 3 seeds
+    estimated_a10_cost_cny: [384, 480]
+  optional_comparison_and_ablation:
+    note: >-
+      Run only after the core result is complete. Equal Weight is nearly free;
+      Pure-PPO and State-GIFT/ablation variants add training cost.

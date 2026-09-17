@@ -1,0 +1,331 @@
+{
+  "analysis_role": "stage-e-six-window-gift-reproduction",
+  "complete_seed_runs": 36,
+  "independent_dataset_window_cells": 12,
+  "seeds_per_cell": 3,
+  "baseline_provenance": {
+    "odd_windows": "locked Stage-D",
+    "even_windows": "Stage-E",
+    "gift_all_windows": "locked Stage-B"
+  },
+  "source_lock_hashes": {
+    "stage_b": "128e7ddad02aa86363d7bcb66d0067bd9dcf8366e0b26661313038d85a7d84da",
+    "stage_d": "b44370eb7a7f825e98644da4e6f808cad7b990a9a6a6218a863c802e056c2f74"
+  },
+  "primary_comparison": "Pure GIFT versus PPO-TestOnly",
+  "strict_full_window_superiority_supported": false,
+  "strict_rule": "95% hierarchical block-bootstrap lower bound > 0, both dataset mean Sharpe deltas > 0, and at least 8/12 positive cell deltas",
+  "light_mix_directional_replication": {
+    "scope": "portfolio_5stocks (Light Mix), six windows",
+    "comparison": "Pure GIFT versus PPO-TestOnly",
+    "mean_delta_sharpe": 0.06532659540929363,
+    "positive_sharpe_windows": 3,
+    "windows_winning_at_least_4_of_5_metrics": 3,
+    "directional_replication_supported": false,
+    "rule": "mean Sharpe delta > 0, at least 4/6 positive Sharpe windows, and at least 4/6 windows winning >=4 of 5 reported metrics"
+  },
+  "contrasts": {
+    "pure_gift_vs_ppo_test_only": {
+      "mean_cell_delta_sharpe": 0.11175476154323243,
+      "median_cell_delta_sharpe": 0.19232019546173973,
+      "positive_cells": 8,
+      "cell_win_rate": 0.6666666666666666,
+      "seed_run_win_rate": 0.5277777777777778,
+      "hedges_g_paired": 0.16555693118567136,
+      "exact_one_sided_sign_flip_p": 0.269775390625,
+      "dataset_means": {
+        "portfolio_5stocks": 0.06532659540929364,
+        "portfolio_5stocks2": 0.1581829276771712
+      },
+      "window_means": {
+        "W1": 0.4982862349027997,
+        "W2": 0.19242678960274007,
+        "W3": -0.12841890435520747,
+        "W4": -0.16514963012685485,
+        "W5": 0.5462381416672695,
+        "W6": -0.27285406243135246
+      },
+      "bootstrap": {
+        "resamples": 10000,
+        "block_length": 20,
+        "ci95": [
+          -0.3423960489417036,
+          0.6233428111353639
+        ],
+        "probability_positive": 0.7155
+      }
+    },
+    "pure_gift_vs_ppo_train_plus_test": {
+      "mean_cell_delta_sharpe": 0.4495157148240327,
+      "median_cell_delta_sharpe": 0.4275825859893161,
+      "positive_cells": 11,
+      "cell_win_rate": 0.9166666666666666,
+      "seed_run_win_rate": 0.6944444444444444,
+      "hedges_g_paired": 0.9805665292975914,
+      "exact_one_sided_sign_flip_p": 0.001708984375,
+      "dataset_means": {
+        "portfolio_5stocks": 0.334149654378506,
+        "portfolio_5stocks2": 0.5648817752695595
+      },
+      "window_means": {
+        "W1": 0.45832796208767834,
+        "W2": -0.0689814959743169,
+        "W3": 0.303690746799929,
+        "W4": 0.8077542453087364,
+        "W5": 0.6473619539198069,
+        "W6": 0.5489408768023625
+      },
+      "bootstrap": {
+        "resamples": 10000,
+        "block_length": 20,
+        "ci95": [
+          0.04907421884457907,
+          0.8944864330566834
+        ],
+        "probability_positive": 0.9861
+      }
+    },
+    "pure_gift_vs_equal_weight": {
+      "mean_cell_delta_sharpe": -0.1296765248552806,
+      "median_cell_delta_sharpe": -0.11898983747762851,
+      "positive_cells": 2,
+      "cell_win_rate": 0.16666666666666666,
+      "seed_run_win_rate": 0.3611111111111111,
+      "hedges_g_paired": -0.35269002420832696,
+      "exact_one_sided_sign_flip_p": 0.890625,
+      "dataset_means": {
+        "portfolio_5stocks": -0.05659067448121404,
+        "portfolio_5stocks2": -0.20276237522934717
+      },
+      "window_means": {
+        "W1": -0.36711636086418364,
+        "W2": -0.384721071604486,
+        "W3": -0.031273234936414665,
+        "W4": 0.32149162975691514,
+        "W5": -0.06676114697516958,
+        "W6": -0.24967896450834498
+      },
+      "bootstrap": {
+        "resamples": 10000,
+        "block_length": 20,
+        "ci95": [
+          -0.4156360021567008,
+          0.14155244457305147
+        ],
+        "probability_positive": 0.1548
+      }
+    }
+  },
+  "paper_table_2_similarity": {
+    "pure_gift": {
+      "test_total_return": {
+        "pearson_window_pattern": 0.9793681657559026,
+        "mean_absolute_error": 3.1501671008361094,
+        "paper_values": [
+          2.41,
+          12.16,
+          -13.61,
+          -9.17,
+          20.4,
+          5.8
+        ],
+        "local_seed_means": [
+          -0.29102005576877216,
+          14.762039393509383,
+          -23.09052987385911,
+          -8.02072933115083,
+          21.969482585145602,
+          4.401339972115381
+        ]
+      },
+      "test_sharpe": {
+        "pearson_window_pattern": 0.9912828398733367,
+        "mean_absolute_error": 0.19504195024545581,
+        "paper_values": [
+          0.45,
+          2.11,
+          -1.25,
+          -0.72,
+          2.71,
+          1.11
+        ],
+        "local_seed_means": [
+          0.11428865807050488,
+          2.0939454210337245,
+          -1.4390341722306295,
+          -0.6432499028048188,
+          2.8728889591093014,
+          0.7201874479581477
+        ]
+      },
+      "test_sortino": {
+        "pearson_window_pattern": 0.9922231960666363,
+        "mean_absolute_error": 0.19093551348962143,
+        "paper_values": [
+          0.45,
+          2.1,
+          -1.13,
+          -0.77,
+          2.98,
+          1.07
+        ],
+        "local_seed_means": [
+          0.10649257294688323,
+          2.134362718886586,
+          -1.29121313868603,
+          -0.7220695998244189,
+          3.1569097408135076,
+          0.6883103446770931
+        ]
+      },
+      "test_max_drawdown": {
+        "pearson_window_pattern": 0.9697457955928218,
+        "mean_absolute_error": 3.4974623763215056,
+        "paper_values": [
+          10.04,
+          6.74,
+          21.23,
+          13.7,
+          10.05,
+          8.89
+        ],
+        "local_seed_means": [
+          13.73391253560092,
+          7.825055785118372,
+          31.454187252817203,
+          15.897153924183558,
+          8.746312702370336,
+          11.370777462579312
+        ]
+      },
+      "test_calmar": {
+        "pearson_window_pattern": 0.9776349037273884,
+        "mean_absolute_error": 0.5696016129600742,
+        "paper_values": [
+          0.7,
+          4.26,
+          -1.51,
+          -1.43,
+          4.63,
+          1.65
+        ],
+        "local_seed_means": [
+          0.18968491953119346,
+          4.527096468536283,
+          -1.7461431998448955,
+          -0.9026984271416292,
+          5.849754437456435,
+          0.9930010814043461
+        ]
+      }
+    },
+    "ppo_test_only": {
+      "test_total_return": {
+        "pearson_window_pattern": 0.9109839863431851,
+        "mean_absolute_error": 7.943606069017352,
+        "paper_values": [
+          -1.78,
+          12.13,
+          -32.7,
+          -23.46,
+          13.62,
+          5.28
+        ],
+        "local_seed_means": [
+          -6.450154886545586,
+          12.043272103125702,
+          -17.211797307378294,
+          -17.510388315869765,
+          28.6472508975606,
+          11.719688356371678
+        ]
+      },
+      "test_sharpe": {
+        "pearson_window_pattern": 0.9398426762710106,
+        "mean_absolute_error": 0.7174769108332093,
+        "paper_values": [
+          -0.14,
+          2.08,
+          -2.05,
+          -2.3,
+          1.99,
+          0.79
+        ],
+        "local_seed_means": [
+          -0.6627430775023667,
+          1.928845764342973,
+          -1.1160238663536035,
+          -1.3277634926078479,
+          2.894455965041592,
+          1.6102955457597214
+        ]
+      },
+      "test_sortino": {
+        "pearson_window_pattern": 0.9440858983238413,
+        "mean_absolute_error": 0.6970327983402232,
+        "paper_values": [
+          -0.14,
+          2.12,
+          -1.72,
+          -2.42,
+          2.32,
+          0.77
+        ],
+        "local_seed_means": [
+          -0.6611361773525255,
+          1.9514163856599103,
+          -1.000299411400168,
+          -1.413974815620272,
+          3.1423821222119397,
+          1.7143691031572246
+        ]
+      },
+      "test_max_drawdown": {
+        "pearson_window_pattern": 0.9342505881723263,
+        "mean_absolute_error": 3.2965918839372725,
+        "paper_values": [
+          11.93,
+          7.65,
+          35.98,
+          26.35,
+          11.33,
+          12.28
+        ],
+        "local_seed_means": [
+          16.03240377811139,
+          7.912070275665994,
+          25.476322854296125,
+          24.053613540523127,
+          11.446298361671014,
+          9.78128471700551
+        ]
+      },
+      "test_calmar": {
+        "pearson_window_pattern": 0.9279682223178882,
+        "mean_absolute_error": 1.115233005321978,
+        "paper_values": [
+          -0.22,
+          3.75,
+          -2.41,
+          -2.32,
+          2.85,
+          1.16
+        ],
+        "local_seed_means": [
+          -0.8589441579329128,
+          3.7871984049213316,
+          -1.49372709704927,
+          -1.6527313179785317,
+          5.504470727599233,
+          2.937243156506193
+        ]
+      }
+    }
+  },
+  "caveats": [
+    "D1 and D2 share three stocks and are not independent universes.",
+    "The inferential unit is the dataset-window cell mean, not each day.",
+    "Stage-B Pure-GIFT code generation is pipeline-level and is not a fixed-code PBIR ablation.",
+    "The paper overlay is descriptive; local raw returns drive inference."
+  ]
+}

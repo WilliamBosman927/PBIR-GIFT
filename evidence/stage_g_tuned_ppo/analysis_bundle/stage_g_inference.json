@@ -1,0 +1,186 @@
+{
+  "analysis_role": "stage-g-independently-tuned-ppo-fairness-check",
+  "complete_seed_runs": 36,
+  "dataset_window_cells": 12,
+  "seeds_per_cell": 3,
+  "primary_comparison": "Pure GIFT versus independently tuned PPO-TestOnly",
+  "primary_metric": "out-of-sample Sharpe",
+  "strict_supported": false,
+  "strict_rule": "Sharpe hierarchical block-bootstrap 95% CI lower bound > 0; both dataset mean deltas > 0; at least 8/12 positive cells.",
+  "selected_ppo": {
+    "epochs_per_update": 8,
+    "max_episodes": 35,
+    "actor_lr": 0.0003,
+    "clip_epsilon": 0.2,
+    "entropy_coef": 0.01
+  },
+  "selection_protocol": {
+    "name": "stage-g-independently-tuned-ppo",
+    "version": 1,
+    "stage": "G_selected",
+    "status": "prospective_supplement_after_stage_f",
+    "method": "PPO-TestOnly",
+    "selection_dataset": "portfolio_5stocks",
+    "selection_window": "D1-W1-internal-validation",
+    "train_period": [
+      "2019-01-01",
+      "2019-12-31"
+    ],
+    "validation_period": [
+      "2020-01-01",
+      "2020-06-30"
+    ],
+    "selection_seeds": [
+      42,
+      123,
+      456
+    ],
+    "selection_rule": "Fixed-order sequential OFAT; maximize seed-averaged held-out validation Sharpe of Pure PPO, with Sortino, total return, absolute max drawdown, and lower level as deterministic ties.",
+    "parameter_order": [
+      "epochs_per_update",
+      "max_episodes",
+      "actor_lr",
+      "clip_epsilon",
+      "entropy_coef"
+    ],
+    "source_config": "${PROJECT_ROOT}\\config_tuning_D1_W1.yaml",
+    "source_results_root": "${PROJECT_ROOT}\\results\\stage_g_tuned_ppo\\tuning",
+    "selected_candidates": {
+      "epochs_per_update": {
+        "parameter": "epochs_per_update",
+        "level": 4,
+        "value": 8,
+        "selection_seeds": "42,123,456",
+        "frozen_prior_ppo": "{}",
+        "mean_validation_sharpe": 2.981561073965492,
+        "mean_validation_sortino": 2.5744584998354765,
+        "mean_validation_total_return": 11.86719650388158,
+        "mean_validation_max_drawdown": 4.3858689979324055
+      },
+      "max_episodes": {
+        "parameter": "max_episodes",
+        "level": 2,
+        "value": 35,
+        "selection_seeds": "42,123,456",
+        "frozen_prior_ppo": "{\"epochs_per_update\": 8}",
+        "mean_validation_sharpe": 3.0081354910981193,
+        "mean_validation_sortino": 2.636905672460211,
+        "mean_validation_total_return": 12.118330781312755,
+        "mean_validation_max_drawdown": 4.335408489895336
+      },
+      "actor_lr": {
+        "parameter": "actor_lr",
+        "level": 3,
+        "value": 0.0003,
+        "selection_seeds": "42,123,456",
+        "frozen_prior_ppo": "{\"epochs_per_update\": 8, \"max_episodes\": 35}",
+        "mean_validation_sharpe": 3.0081354910981193,
+        "mean_validation_sortino": 2.636905672460211,
+        "mean_validation_total_return": 12.118330781312755,
+        "mean_validation_max_drawdown": 4.335408489895336
+      },
+      "clip_epsilon": {
+        "parameter": "clip_epsilon",
+        "level": 4,
+        "value": 0.2,
+        "selection_seeds": "42,123,456",
+        "frozen_prior_ppo": "{\"actor_lr\": 0.0003, \"epochs_per_update\": 8, \"max_episodes\": 35}",
+        "mean_validation_sharpe": 3.0081354910981193,
+        "mean_validation_sortino": 2.636905672460211,
+        "mean_validation_total_return": 12.118330781312755,
+        "mean_validation_max_drawdown": 4.335408489895336
+      },
+      "entropy_coef": {
+        "parameter": "entropy_coef",
+        "level": 4,
+        "value": 0.01,
+        "selection_seeds": "42,123,456",
+        "frozen_prior_ppo": "{\"actor_lr\": 0.0003, \"clip_epsilon\": 0.2, \"epochs_per_update\": 8, \"max_episodes\": 35}",
+        "mean_validation_sharpe": 3.0081354910981193,
+        "mean_validation_sortino": 2.636905672460211,
+        "mean_validation_total_return": 12.118330781312755,
+        "mean_validation_max_drawdown": 4.335408489895336
+      }
+    },
+    "created_utc": "2026-09-04T08:46:11.806989+00:00"
+  },
+  "metrics": {
+    "total_return": {
+      "direction": "Pure GIFT \u2212 PPO-Tuned",
+      "mean_cell_delta": -1.6993165498292016,
+      "median_cell_delta": -1.1326019809436854,
+      "positive_cells": 3,
+      "cell_win_rate": 0.25,
+      "seed_run_win_rate": 0.3333333333333333,
+      "hedges_g_paired": -0.5986642100386499,
+      "exact_one_sided_sign_flip_p": 0.982177734375,
+      "holm_adjusted_p": 1.0
+    },
+    "sharpe": {
+      "direction": "Pure GIFT \u2212 PPO-Tuned",
+      "mean_cell_delta": -0.14370350480774421,
+      "median_cell_delta": -0.13790041907802197,
+      "positive_cells": 3,
+      "cell_win_rate": 0.25,
+      "seed_run_win_rate": 0.3055555555555556,
+      "hedges_g_paired": -0.6138938487446062,
+      "exact_one_sided_sign_flip_p": 0.9775390625,
+      "holm_adjusted_p": 1.0,
+      "bootstrap": {
+        "resamples": 10000,
+        "block_length": 20,
+        "ci95": [
+          -0.4366542075100155,
+          0.13186489671115473
+        ],
+        "probability_positive": 0.1564
+      },
+      "dataset_means": {
+        "portfolio_5stocks": -0.13996888455532996,
+        "portfolio_5stocks2": -0.1474381250601584
+      }
+    },
+    "sortino": {
+      "direction": "Pure GIFT \u2212 PPO-Tuned",
+      "mean_cell_delta": -0.12047022215907897,
+      "median_cell_delta": -0.10023924941721396,
+      "positive_cells": 4,
+      "cell_win_rate": 0.3333333333333333,
+      "seed_run_win_rate": 0.3333333333333333,
+      "hedges_g_paired": -0.50419988463292,
+      "exact_one_sided_sign_flip_p": 0.955810546875,
+      "holm_adjusted_p": 1.0
+    },
+    "max_drawdown_improvement": {
+      "direction": "PPO-Tuned \u2212 Pure GIFT",
+      "mean_cell_delta": -0.22919972789801465,
+      "median_cell_delta": -0.35221673919216123,
+      "positive_cells": 5,
+      "cell_win_rate": 0.4166666666666667,
+      "seed_run_win_rate": 0.4722222222222222,
+      "hedges_g_paired": -0.1922483284748752,
+      "exact_one_sided_sign_flip_p": 0.748779296875,
+      "holm_adjusted_p": 1.0
+    },
+    "calmar": {
+      "direction": "Pure GIFT \u2212 PPO-Tuned",
+      "mean_cell_delta": -0.3602248509030907,
+      "median_cell_delta": -0.31773289371506086,
+      "positive_cells": 2,
+      "cell_win_rate": 0.16666666666666666,
+      "seed_run_win_rate": 0.3055555555555556,
+      "hedges_g_paired": -0.6179559486591069,
+      "exact_one_sided_sign_flip_p": 0.9794921875,
+      "holm_adjusted_p": 1.0
+    }
+  },
+  "source_lock_hashes": {
+    "stage_b": "128e7ddad02aa86363d7bcb66d0067bd9dcf8366e0b26661313038d85a7d84da"
+  },
+  "caveats": [
+    "Stage-G is a prospective supplemental fairness analysis added after Stage-F.",
+    "D1 and D2 share three stocks and are not independent universes.",
+    "Dataset-window cell means, not daily observations, are inferential units.",
+    "Sequential OFAT may miss hyperparameter interactions."
+  ]
+}

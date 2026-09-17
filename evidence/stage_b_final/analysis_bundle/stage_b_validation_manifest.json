@@ -1,0 +1,38 @@
+{
+  "expected_paired_runs": 36,
+  "observed_paired_runs": 36,
+  "expected_cells": 12,
+  "observed_cells": 12,
+  "expected_seeds_per_cell": [
+    42,
+    123,
+    456
+  ],
+  "seed_mismatches": {},
+  "frozen_ppo_parameter_sets": [
+    [
+      "10",
+      "50",
+      "0.0005",
+      "0.3",
+      "0.001"
+    ]
+  ],
+  "selection_sha256_values": [
+    "9b842765352e1cc39245fd4a9bec771a7aeeabe4d803ad5d73a4051d971e205f"
+  ],
+  "method_order_counts": {
+    "pure_gift>pbir": 19,
+    "pbir>pure_gift": 17
+  },
+  "within_window_config_hash_mismatches": {},
+  "invalid_statuses": [],
+  "missing_final_comparison_files": [],
+  "confirmatory_readiness": {
+    "complete_primary_cells": true,
+    "expected_primary_cells": 6,
+    "expected_seeds": 3,
+    "seed_ready": true,
+    "daily_returns_available": true
+  }
+}

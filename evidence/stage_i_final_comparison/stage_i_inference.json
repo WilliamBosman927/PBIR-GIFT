@@ -1,0 +1,134 @@
+{
+  "analysis_role": "stage-i-final-locked-synthesis",
+  "primary_metric": "out-of-sample Sharpe",
+  "inferential_unit": "dataset-window cell mean",
+  "main_methods": [
+    "pbir",
+    "pure_gift",
+    "ppo_test_only",
+    "ppo_tuned",
+    "sma",
+    "bollinger",
+    "xgboost"
+  ],
+  "supplementary_methods": [
+    "ppo_train_plus_test",
+    "equal_weight",
+    "wma",
+    "atr",
+    "turn_of_month"
+  ],
+  "key_contrasts": [
+    {
+      "contrast": "pbir_vs_pure_gift",
+      "label": "PBIR-GIFT \u2212 Pure GIFT",
+      "source_stage": "Stage-F",
+      "confirmatory_family": true,
+      "mean_cell_delta_sharpe": 0.2781127868947237,
+      "positive_cells": 10,
+      "hedges_g_paired": 0.9401697585748268,
+      "exact_one_sided_sign_flip_p": 0.00439453125,
+      "bootstrap_ci95_low": -0.009818198833136005,
+      "bootstrap_ci95_high": 0.5577375280068991,
+      "bootstrap_probability_positive": 0.9701,
+      "upstream_strict_supported": false,
+      "holm_adjusted_p_six_contrasts": 0.0263671875
+    },
+    {
+      "contrast": "pure_gift_vs_ppo_matched",
+      "label": "Pure GIFT \u2212 PPO-Matched",
+      "source_stage": "Stage-E",
+      "confirmatory_family": true,
+      "mean_cell_delta_sharpe": 0.11175476154323243,
+      "positive_cells": 8,
+      "hedges_g_paired": 0.16555693118567136,
+      "exact_one_sided_sign_flip_p": 0.269775390625,
+      "bootstrap_ci95_low": -0.3423960489417036,
+      "bootstrap_ci95_high": 0.6233428111353639,
+      "bootstrap_probability_positive": 0.7155,
+      "upstream_strict_supported": false,
+      "holm_adjusted_p_six_contrasts": 0.53955078125
+    },
+    {
+      "contrast": "pure_gift_vs_ppo_tuned",
+      "label": "Pure GIFT \u2212 PPO-Tuned",
+      "source_stage": "Stage-G",
+      "confirmatory_family": true,
+      "mean_cell_delta_sharpe": -0.14370350480774421,
+      "positive_cells": 3,
+      "hedges_g_paired": -0.6138938487446062,
+      "exact_one_sided_sign_flip_p": 0.9775390625,
+      "bootstrap_ci95_low": -0.4366542075100155,
+      "bootstrap_ci95_high": 0.13186489671115473,
+      "bootstrap_probability_positive": 0.1564,
+      "upstream_strict_supported": false,
+      "holm_adjusted_p_six_contrasts": 0.9775390625
+    },
+    {
+      "contrast": "pure_gift_vs_sma",
+      "label": "Pure GIFT \u2212 SMA",
+      "source_stage": "Stage-H",
+      "confirmatory_family": false,
+      "mean_cell_delta_sharpe": 0.2813627452828109,
+      "positive_cells": 7,
+      "hedges_g_paired": 0.2554544277048047,
+      "exact_one_sided_sign_flip_p": 0.178955078125,
+      "bootstrap_ci95_low": -0.3665113354543378,
+      "bootstrap_ci95_high": 0.8977948801760829,
+      "bootstrap_probability_positive": 0.7988,
+      "upstream_strict_supported": false,
+      "holm_adjusted_p_six_contrasts": 0.536865234375
+    },
+    {
+      "contrast": "pure_gift_vs_bollinger",
+      "label": "Pure GIFT \u2212 Bollinger Bands",
+      "source_stage": "Stage-H",
+      "confirmatory_family": false,
+      "mean_cell_delta_sharpe": 0.26956091401509674,
+      "positive_cells": 8,
+      "hedges_g_paired": 0.3184378609917887,
+      "exact_one_sided_sign_flip_p": 0.129638671875,
+      "bootstrap_ci95_low": -0.25208129425174447,
+      "bootstrap_ci95_high": 1.0743734336082882,
+      "bootstrap_probability_positive": 0.8786,
+      "upstream_strict_supported": false,
+      "holm_adjusted_p_six_contrasts": 0.5185546875
+    },
+    {
+      "contrast": "pure_gift_vs_xgboost",
+      "label": "Pure GIFT \u2212 XGBoost",
+      "source_stage": "Stage-H",
+      "confirmatory_family": false,
+      "mean_cell_delta_sharpe": 0.7059773541573519,
+      "positive_cells": 7,
+      "hedges_g_paired": 0.5813756320183577,
+      "exact_one_sided_sign_flip_p": 0.02734375,
+      "bootstrap_ci95_low": 0.07507344800405158,
+      "bootstrap_ci95_high": 1.48057276017803,
+      "bootstrap_probability_positive": 0.9862,
+      "upstream_strict_supported": false,
+      "holm_adjusted_p_six_contrasts": 0.13671875
+    }
+  ],
+  "confirmatory_decisions_after_six-contrast_holm": {
+    "pbir_vs_pure_gift": false,
+    "pure_gift_vs_ppo_matched": false,
+    "pure_gift_vs_ppo_tuned": false
+  },
+  "source_lock_hashes": {
+    "stage_b": "128e7ddad02aa86363d7bcb66d0067bd9dcf8366e0b26661313038d85a7d84da",
+    "stage_c": "d4f40f9bddf6bdad59548c325cc45072604503c2487c1f24155111c584cb03c9",
+    "stage_d": "b44370eb7a7f825e98644da4e6f808cad7b990a9a6a6218a863c802e056c2f74",
+    "stage_e": "c3bc3ea0c8195943541678ad0fb8501c5d3d4e8490c57ac4fa619542caa9b947",
+    "stage_f": "8ac0b5b8fd4e231f36901b419d5962e274a068c7fc296dad040d518736a2d7b8",
+    "stage_g": "abba54b754e5120252bf1f59820203b5065c92b6ba5feaed9925514f1d8a26b7",
+    "stage_h": "bf27f8ba37bca6e2fe9558e39e13beb57b2d45a2b6d0a451e0c01a62b85ec4f0"
+  },
+  "caveats": [
+    "Stage-I does not retune or rerun any upstream method.",
+    "PBIR versus Pure GIFT uses fixed-code Stage-C/F evidence.",
+    "External method rankings use full pipeline Stage-B GIFT/PBIR outputs.",
+    "Equal Weight remains reported in the supplementary table.",
+    "Only method-specific, not universal, superiority claims are permitted."
+  ]
+}

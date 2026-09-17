@@ -1,0 +1,102 @@
+{
+  "analysis_role": "controlled_replication",
+  "analysis_readiness": {
+    "complete_primary_cells": true,
+    "expected_primary_cells": 6,
+    "expected_seeds": 3,
+    "seed_ready": true,
+    "daily_returns_available": true
+  },
+  "primary": {
+    "mean_delta_sharpe": 0.36827139733962294,
+    "dataset_means": {
+      "portfolio_5stocks": 0.23428341114995158,
+      "portfolio_5stocks2": 0.5022593835292943
+    },
+    "window_means": {
+      "W1": 0.289858938033727,
+      "W3": 0.388345063618976,
+      "W5": 0.4266101903661659
+    },
+    "worst_cell_mdd_deterioration_percentage_points": 2.3748765445383206,
+    "predeclared_support": false
+  },
+  "metrics": {
+    "sharpe": {
+      "mean_cell_delta": 0.36827139733962294,
+      "median_cell_delta": 0.4266101903661659,
+      "cell_win_rate": 0.8333333333333334,
+      "hedges_g_paired": 1.2266816951963464,
+      "exact_one_sided_sign_flip_p": 0.03125,
+      "holm_adjusted_p": 0.125
+    },
+    "sortino": {
+      "mean_cell_delta": 0.3713970506648168,
+      "median_cell_delta": 0.4010579644278025,
+      "cell_win_rate": 0.8333333333333334,
+      "hedges_g_paired": 1.0642692128359406,
+      "exact_one_sided_sign_flip_p": 0.03125,
+      "holm_adjusted_p": 0.125
+    },
+    "max_drawdown_improvement": {
+      "mean_cell_delta": 0.40562993460744323,
+      "median_cell_delta": 1.3764793519499974,
+      "cell_win_rate": 0.6666666666666666,
+      "hedges_g_paired": 0.18275285739917427,
+      "exact_one_sided_sign_flip_p": 0.3125,
+      "holm_adjusted_p": 0.3125
+    },
+    "total_return": {
+      "mean_cell_delta": 3.1730296952233235,
+      "median_cell_delta": 1.4784672347068597,
+      "cell_win_rate": 0.8333333333333334,
+      "hedges_g_paired": 0.5859056063797908,
+      "exact_one_sided_sign_flip_p": 0.046875,
+      "holm_adjusted_p": 0.125
+    }
+  },
+  "bootstrap": {
+    "sharpe": {
+      "resamples": 10000,
+      "block_length": 20,
+      "ci95": [
+        -0.05278320870954665,
+        0.7850472454553507
+      ],
+      "probability_positive": 0.955
+    },
+    "sortino": {
+      "resamples": 10000,
+      "block_length": 20,
+      "ci95": [
+        -0.1276173973301311,
+        0.8289094363247749
+      ],
+      "probability_positive": 0.9253
+    },
+    "max_drawdown_improvement": {
+      "resamples": 10000,
+      "block_length": 20,
+      "ci95": [
+        -2.0249789468334862,
+        2.2163387571273536
+      ],
+      "probability_positive": 0.524
+    },
+    "total_return": {
+      "resamples": 10000,
+      "block_length": 20,
+      "ci95": [
+        -1.2846000631217358,
+        10.083387038548356
+      ],
+      "probability_positive": 0.9025
+    }
+  },
+  "interpretation": "DOES NOT MEET the controlled-replication decision gate",
+  "caveats": [
+    "W2/W4/W6 are overlapping robustness windows, not independent units.",
+    "D1 and D2 share AMZN, MSFT, and JNJ.",
+    "A non-significant result is not evidence of equivalence."
+  ]
+}

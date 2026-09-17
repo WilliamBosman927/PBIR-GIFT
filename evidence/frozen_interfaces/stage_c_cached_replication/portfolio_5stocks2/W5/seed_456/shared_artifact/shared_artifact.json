@@ -1,0 +1,23 @@
+{
+  "artifact_role": "fixed-shared-code-controlled-replication",
+  "code_file": "code.py",
+  "code_sha256": "d01c5964121dac6c6428d07342c79459f8edc548eba1f3d227f1e167c069a282",
+  "feature_dim": 4,
+  "reward_config_file": "reward_config.json",
+  "reward_config_sha256": "5572908795779621bdee68f85eef3116bf59a130715a8b839c86ab5c4aba8b7e",
+  "schema_version": 1,
+  "source": {
+    "best_iteration": 3,
+    "dataset": "portfolio_5stocks2",
+    "method": "pbir",
+    "protocol": "stage_b_pipeline_comparison",
+    "seed": 456,
+    "selection_sha256": "9b842765352e1cc39245fd4a9bec771a7aeeabe4d803ad5d73a4051d971e205f",
+    "source_code_encoding": "gb18030",
+    "source_code_original_sha256": "1c3158cec9badea6db29faa75df339ea931449fb910b20d86dd8ed98dfcbbe21",
+    "source_code_relative_path": "portfolio_5stocks2/W5/seed_456/methods/pbir/iteration_3/code.py",
+    "source_config_relative_path": "portfolio_5stocks2/W5/seed_456/methods/pbir/iteration_3/config.json",
+    "window": "W5"
+  },
+  "state_dim": 124
+}

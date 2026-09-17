@@ -1,0 +1,45 @@
+{
+  "expected_paired_runs": 18,
+  "observed_paired_runs": 18,
+  "expected_cells": 6,
+  "observed_cells": 6,
+  "expected_seeds_per_cell": [
+    42,
+    123,
+    456
+  ],
+  "seed_mismatches": {},
+  "frozen_ppo_parameter_sets": [
+    [
+      "10",
+      "50",
+      "0.0005",
+      "0.3",
+      "0.001"
+    ]
+  ],
+  "selection_sha256_values": [
+    "9b842765352e1cc39245fd4a9bec771a7aeeabe4d803ad5d73a4051d971e205f"
+  ],
+  "method_order_counts": {
+    "pure_gift>pbir": 9,
+    "pbir>pure_gift": 9
+  },
+  "within_window_config_hash_mismatches": {
+    "portfolio_5stocks/W1": 3,
+    "portfolio_5stocks/W3": 3,
+    "portfolio_5stocks/W5": 3,
+    "portfolio_5stocks2/W1": 3,
+    "portfolio_5stocks2/W3": 3,
+    "portfolio_5stocks2/W5": 3
+  },
+  "invalid_statuses": [],
+  "missing_final_comparison_files": [],
+  "confirmatory_readiness": {
+    "complete_primary_cells": true,
+    "expected_primary_cells": 6,
+    "expected_seeds": 3,
+    "seed_ready": true,
+    "daily_returns_available": true
+  }
+}

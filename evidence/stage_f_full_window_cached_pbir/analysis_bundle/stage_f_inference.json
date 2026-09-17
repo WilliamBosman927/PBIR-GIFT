@@ -1,0 +1,163 @@
+{
+  "analysis_role": "stage-f-full-window-fixed-code-pbir-replication",
+  "complete_seed_pairs": 36,
+  "dataset_window_cells": 12,
+  "primary_inferential_cell_means": 12,
+  "seeds_per_cell": 3,
+  "stage_c_odd_window_pairs": 18,
+  "stage_f_even_window_pairs": 18,
+  "llm_calls_during_controlled_replay": 0,
+  "source_lock_hashes": {
+    "stage_c": "d4f40f9bddf6bdad59548c325cc45072604503c2487c1f24155111c584cb03c9"
+  },
+  "primary": {
+    "comparison": "PBIR-GIFT versus Pure GIFT",
+    "metric": "out-of-sample Sharpe",
+    "mean_cell_delta_sharpe": 0.2781127868947237,
+    "positive_cells": 10,
+    "dataset_means": {
+      "portfolio_5stocks": 0.21985951413031848,
+      "portfolio_5stocks2": 0.33636605965912886
+    },
+    "window_means": {
+      "W1": 0.289858938033727,
+      "W2": 0.5446571204173727,
+      "W3": 0.388345063618976,
+      "W4": -0.026623470980072332,
+      "W5": 0.4266101903661659,
+      "W6": 0.045828879912172715
+    },
+    "bootstrap": {
+      "resamples": 10000,
+      "block_length": 20,
+      "ci95": [
+        -0.009818198833136005,
+        0.5577375280068991
+      ],
+      "probability_positive": 0.9701
+    },
+    "worst_cell_mdd_deterioration_percentage_points": 2.3748765445383206,
+    "strict_full_window_supported": false,
+    "strict_rule": "Sharpe hierarchical block-bootstrap 95% CI lower bound > 0; both dataset mean Sharpe deltas > 0; at least 8/12 cell means positive; worst cell MDD deterioration <= 5 percentage points."
+  },
+  "odd_even_generalization": {
+    "odd_stage_c": {
+      "mean_delta_sharpe": 0.36827139733962294,
+      "positive_cells": 5,
+      "cells": 6
+    },
+    "even_stage_f": {
+      "mean_delta_sharpe": 0.18795417644982437,
+      "positive_cells": 5,
+      "cells": 6
+    }
+  },
+  "metrics": {
+    "sharpe": {
+      "direction": "PBIR-GIFT \u2212 Pure GIFT",
+      "mean_cell_delta": 0.2781127868947237,
+      "median_cell_delta": 0.2958802511339646,
+      "positive_cells": 10,
+      "cell_win_rate": 0.8333333333333334,
+      "seed_pair_win_rate": 0.6944444444444444,
+      "hedges_g_paired": 0.9401697585748268,
+      "exact_one_sided_sign_flip_p": 0.00439453125,
+      "holm_adjusted_p": 0.02197265625,
+      "bootstrap": {
+        "resamples": 10000,
+        "block_length": 20,
+        "ci95": [
+          -0.009818198833136005,
+          0.5577375280068991
+        ],
+        "probability_positive": 0.9701
+      }
+    },
+    "sortino": {
+      "direction": "PBIR-GIFT \u2212 Pure GIFT",
+      "mean_cell_delta": 0.27582562414638084,
+      "median_cell_delta": 0.281880742676336,
+      "positive_cells": 10,
+      "cell_win_rate": 0.8333333333333334,
+      "seed_pair_win_rate": 0.6666666666666666,
+      "hedges_g_paired": 0.8454631386996063,
+      "exact_one_sided_sign_flip_p": 0.005859375,
+      "holm_adjusted_p": 0.02197265625,
+      "bootstrap": {
+        "resamples": 10000,
+        "block_length": 20,
+        "ci95": [
+          -0.050798533574971806,
+          0.5864997312562323
+        ],
+        "probability_positive": 0.9455
+      }
+    },
+    "total_return": {
+      "direction": "PBIR-GIFT \u2212 Pure GIFT (percentage points)",
+      "mean_cell_delta": 2.2049795589529446,
+      "median_cell_delta": 1.4784672347068597,
+      "positive_cells": 8,
+      "cell_win_rate": 0.6666666666666666,
+      "seed_pair_win_rate": 0.6388888888888888,
+      "hedges_g_paired": 0.5775947449165056,
+      "exact_one_sided_sign_flip_p": 0.012939453125,
+      "holm_adjusted_p": 0.02587890625,
+      "bootstrap": {
+        "resamples": 10000,
+        "block_length": 20,
+        "ci95": [
+          -0.5112996658532498,
+          6.045606783033187
+        ],
+        "probability_positive": 0.9389
+      }
+    },
+    "max_drawdown_improvement": {
+      "direction": "Pure GIFT \u2212 PBIR-GIFT (percentage points)",
+      "mean_cell_delta": 0.6470275667866033,
+      "median_cell_delta": 1.3520260074064183,
+      "positive_cells": 9,
+      "cell_win_rate": 0.75,
+      "seed_pair_win_rate": 0.5833333333333334,
+      "hedges_g_paired": 0.40010457939758454,
+      "exact_one_sided_sign_flip_p": 0.081298828125,
+      "holm_adjusted_p": 0.081298828125,
+      "bootstrap": {
+        "resamples": 10000,
+        "block_length": 20,
+        "ci95": [
+          -0.8656560958296639,
+          1.9983688904902723
+        ],
+        "probability_positive": 0.766
+      }
+    },
+    "calmar": {
+      "direction": "PBIR-GIFT \u2212 Pure GIFT",
+      "mean_cell_delta": 0.6753927238451573,
+      "median_cell_delta": 0.47582085992387424,
+      "positive_cells": 9,
+      "cell_win_rate": 0.75,
+      "seed_pair_win_rate": 0.7222222222222222,
+      "hedges_g_paired": 0.6729702541359367,
+      "exact_one_sided_sign_flip_p": 0.00537109375,
+      "holm_adjusted_p": 0.02197265625,
+      "bootstrap": {
+        "resamples": 10000,
+        "block_length": 20,
+        "ci95": [
+          -0.23791548835324025,
+          1.8109236704082865
+        ],
+        "probability_positive": 0.9251
+      }
+    }
+  },
+  "caveats": [
+    "W2/W4/W6 overlap adjacent rolling windows and are robustness checks, not six additional independent market regimes.",
+    "D1 and D2 share AMZN, MSFT, and JNJ, so the two portfolios are not fully independent universes.",
+    "The cached code was selected by the Stage-B PBIR branch; this design isolates shaping semantics but does not estimate a fresh-code LLM generation effect.",
+    "Failure to pass the strict gate is not evidence of equivalence or of a software failure."
+  ]
+}

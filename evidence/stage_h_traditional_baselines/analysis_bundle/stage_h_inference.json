@@ -1,0 +1,319 @@
+{
+  "analysis_role": "stage-h-full-window-traditional-baselines",
+  "dataset_window_cells": 12,
+  "gift_seeds_per_cell": 3,
+  "xgboost_seeds_per_cell": 3,
+  "deterministic_baseline_runs_per_cell": 1,
+  "declared_primary_representatives": [
+    "sma",
+    "bollinger",
+    "xgboost"
+  ],
+  "all_methods_reported": [
+    "sma",
+    "wma",
+    "atr",
+    "bollinger",
+    "turn_of_month",
+    "xgboost"
+  ],
+  "contrasts": {
+    "pure_gift_vs_sma": {
+      "comparison": "Pure GIFT versus SMA",
+      "mean_cell_delta_sharpe": 0.2813627452828109,
+      "median_cell_delta_sharpe": 0.10760054284132015,
+      "positive_cells": 7,
+      "cell_win_rate": 0.5833333333333334,
+      "hedges_g_paired": 0.2554544277048047,
+      "exact_one_sided_sign_flip_p": 0.178955078125,
+      "dataset_means": {
+        "portfolio_5stocks": 0.6214887855816755,
+        "portfolio_5stocks2": -0.058763295016053874
+      },
+      "bootstrap": {
+        "resamples": 10000,
+        "block_length": 20,
+        "ci95": [
+          -0.3665113354543378,
+          0.8977948801760829
+        ],
+        "probability_positive": 0.7988
+      },
+      "strict_supported": false,
+      "holm_adjusted_p_across_six_baselines": 0.388916015625
+    },
+    "pure_gift_vs_wma": {
+      "comparison": "Pure GIFT versus WMA",
+      "mean_cell_delta_sharpe": 0.43428595047719787,
+      "median_cell_delta_sharpe": 0.17776253619672244,
+      "positive_cells": 7,
+      "cell_win_rate": 0.5833333333333334,
+      "hedges_g_paired": 0.4577074034339611,
+      "exact_one_sided_sign_flip_p": 0.060791015625,
+      "dataset_means": {
+        "portfolio_5stocks": 0.7699930269946162,
+        "portfolio_5stocks2": 0.09857887395977942
+      },
+      "bootstrap": {
+        "resamples": 10000,
+        "block_length": 20,
+        "ci95": [
+          -0.16250584140766225,
+          1.014357654316931
+        ],
+        "probability_positive": 0.9153
+      },
+      "strict_supported": false,
+      "holm_adjusted_p_across_six_baselines": 0.2431640625
+    },
+    "pure_gift_vs_atr": {
+      "comparison": "Pure GIFT versus ATR",
+      "mean_cell_delta_sharpe": 0.44635209796951836,
+      "median_cell_delta_sharpe": 0.21254001194303196,
+      "positive_cells": 9,
+      "cell_win_rate": 0.75,
+      "hedges_g_paired": 0.49348031772471923,
+      "exact_one_sided_sign_flip_p": 0.047607421875,
+      "dataset_means": {
+        "portfolio_5stocks": 0.44948296958850326,
+        "portfolio_5stocks2": 0.44322122635053357
+      },
+      "bootstrap": {
+        "resamples": 10000,
+        "block_length": 20,
+        "ci95": [
+          -0.13178979731180085,
+          1.0845875021945222
+        ],
+        "probability_positive": 0.9372
+      },
+      "strict_supported": false,
+      "holm_adjusted_p_across_six_baselines": 0.238037109375
+    },
+    "pure_gift_vs_bollinger": {
+      "comparison": "Pure GIFT versus Bollinger Bands",
+      "mean_cell_delta_sharpe": 0.26956091401509674,
+      "median_cell_delta_sharpe": 0.16848767532817793,
+      "positive_cells": 8,
+      "cell_win_rate": 0.6666666666666666,
+      "hedges_g_paired": 0.3184378609917887,
+      "exact_one_sided_sign_flip_p": 0.129638671875,
+      "dataset_means": {
+        "portfolio_5stocks": -0.0499030583306175,
+        "portfolio_5stocks2": 0.5890248863608111
+      },
+      "bootstrap": {
+        "resamples": 10000,
+        "block_length": 20,
+        "ci95": [
+          -0.25208129425174447,
+          1.0743734336082882
+        ],
+        "probability_positive": 0.8786
+      },
+      "strict_supported": false,
+      "holm_adjusted_p_across_six_baselines": 0.388916015625
+    },
+    "pure_gift_vs_turn_of_month": {
+      "comparison": "Pure GIFT versus Turn-of-the-Month",
+      "mean_cell_delta_sharpe": 0.18475534309880748,
+      "median_cell_delta_sharpe": 0.5305600298795485,
+      "positive_cells": 7,
+      "cell_win_rate": 0.5833333333333334,
+      "hedges_g_paired": 0.14671223601196534,
+      "exact_one_sided_sign_flip_p": 0.291015625,
+      "dataset_means": {
+        "portfolio_5stocks": 0.5428954659649967,
+        "portfolio_5stocks2": -0.17338477976738162
+      },
+      "bootstrap": {
+        "resamples": 10000,
+        "block_length": 20,
+        "ci95": [
+          -0.5994038070716026,
+          1.037482525573572
+        ],
+        "probability_positive": 0.7029
+      },
+      "strict_supported": false,
+      "holm_adjusted_p_across_six_baselines": 0.388916015625
+    },
+    "pure_gift_vs_xgboost": {
+      "comparison": "Pure GIFT versus XGBoost",
+      "mean_cell_delta_sharpe": 0.7059773541573519,
+      "median_cell_delta_sharpe": 0.24271036929555345,
+      "positive_cells": 7,
+      "cell_win_rate": 0.5833333333333334,
+      "hedges_g_paired": 0.5813756320183577,
+      "exact_one_sided_sign_flip_p": 0.02734375,
+      "dataset_means": {
+        "portfolio_5stocks": 0.6633906540747829,
+        "portfolio_5stocks2": 0.7485640542399207
+      },
+      "bootstrap": {
+        "resamples": 10000,
+        "block_length": 20,
+        "ci95": [
+          0.07507344800405158,
+          1.48057276017803
+        ],
+        "probability_positive": 0.9862
+      },
+      "strict_supported": false,
+      "holm_adjusted_p_across_six_baselines": 0.1640625
+    },
+    "pbir_vs_sma": {
+      "comparison": "PBIR-GIFT versus SMA",
+      "mean_cell_delta_sharpe": 0.3399045600759527,
+      "median_cell_delta_sharpe": 0.3697878588204029,
+      "positive_cells": 7,
+      "cell_win_rate": 0.5833333333333334,
+      "hedges_g_paired": 0.2647823783968862,
+      "exact_one_sided_sign_flip_p": 0.174072265625,
+      "dataset_means": {
+        "portfolio_5stocks": 0.6607576464776977,
+        "portfolio_5stocks2": 0.019051473674207658
+      },
+      "bootstrap": {
+        "resamples": 10000,
+        "block_length": 20,
+        "ci95": [
+          -0.39465513129708835,
+          1.0395988300558767
+        ],
+        "probability_positive": 0.8121
+      },
+      "strict_supported": false,
+      "holm_adjusted_p_across_six_baselines": 0.39111328125
+    },
+    "pbir_vs_wma": {
+      "comparison": "PBIR-GIFT versus WMA",
+      "mean_cell_delta_sharpe": 0.49282776527033967,
+      "median_cell_delta_sharpe": 0.46825317403778566,
+      "positive_cells": 7,
+      "cell_win_rate": 0.5833333333333334,
+      "hedges_g_paired": 0.4553635938499362,
+      "exact_one_sided_sign_flip_p": 0.061279296875,
+      "dataset_means": {
+        "portfolio_5stocks": 0.8092618878906386,
+        "portfolio_5stocks2": 0.17639364265004098
+      },
+      "bootstrap": {
+        "resamples": 10000,
+        "block_length": 20,
+        "ci95": [
+          -0.16788076170066651,
+          1.119927615834525
+        ],
+        "probability_positive": 0.9207
+      },
+      "strict_supported": false,
+      "holm_adjusted_p_across_six_baselines": 0.2451171875
+    },
+    "pbir_vs_atr": {
+      "comparison": "PBIR-GIFT versus ATR",
+      "mean_cell_delta_sharpe": 0.5048939127626603,
+      "median_cell_delta_sharpe": 0.5698060404148585,
+      "positive_cells": 8,
+      "cell_win_rate": 0.6666666666666666,
+      "hedges_g_paired": 0.5433135624245238,
+      "exact_one_sided_sign_flip_p": 0.03466796875,
+      "dataset_means": {
+        "portfolio_5stocks": 0.4887518304845253,
+        "portfolio_5stocks2": 0.5210359950407953
+      },
+      "bootstrap": {
+        "resamples": 10000,
+        "block_length": 20,
+        "ci95": [
+          -0.07363696497130026,
+          1.1261079191532628
+        ],
+        "probability_positive": 0.9553
+      },
+      "strict_supported": false,
+      "holm_adjusted_p_across_six_baselines": 0.17333984375
+    },
+    "pbir_vs_bollinger": {
+      "comparison": "PBIR-GIFT versus Bollinger Bands",
+      "mean_cell_delta_sharpe": 0.3281027288082387,
+      "median_cell_delta_sharpe": 0.20390356259881268,
+      "positive_cells": 7,
+      "cell_win_rate": 0.5833333333333334,
+      "hedges_g_paired": 0.3223342053776794,
+      "exact_one_sided_sign_flip_p": 0.13037109375,
+      "dataset_means": {
+        "portfolio_5stocks": -0.010634197434595297,
+        "portfolio_5stocks2": 0.6668396550510726
+      },
+      "bootstrap": {
+        "resamples": 10000,
+        "block_length": 20,
+        "ci95": [
+          -0.25324151170424797,
+          1.1485004336081337
+        ],
+        "probability_positive": 0.8933
+      },
+      "strict_supported": false,
+      "holm_adjusted_p_across_six_baselines": 0.39111328125
+    },
+    "pbir_vs_turn_of_month": {
+      "comparison": "PBIR-GIFT versus Turn-of-the-Month",
+      "mean_cell_delta_sharpe": 0.2432971578919494,
+      "median_cell_delta_sharpe": 0.3760233410657426,
+      "positive_cells": 8,
+      "cell_win_rate": 0.6666666666666666,
+      "hedges_g_paired": 0.25685895386326796,
+      "exact_one_sided_sign_flip_p": 0.176025390625,
+      "dataset_means": {
+        "portfolio_5stocks": 0.5821643268610189,
+        "portfolio_5stocks2": -0.09557001107712011
+      },
+      "bootstrap": {
+        "resamples": 10000,
+        "block_length": 20,
+        "ci95": [
+          -0.43993877450263,
+          0.9728810591109699
+        ],
+        "probability_positive": 0.7715
+      },
+      "strict_supported": false,
+      "holm_adjusted_p_across_six_baselines": 0.39111328125
+    },
+    "pbir_vs_xgboost": {
+      "comparison": "PBIR-GIFT versus XGBoost",
+      "mean_cell_delta_sharpe": 0.7645191689504937,
+      "median_cell_delta_sharpe": 0.20598006199806812,
+      "positive_cells": 9,
+      "cell_win_rate": 0.75,
+      "hedges_g_paired": 0.6469191011274367,
+      "exact_one_sided_sign_flip_p": 0.020263671875,
+      "dataset_means": {
+        "portfolio_5stocks": 0.7026595149708051,
+        "portfolio_5stocks2": 0.8263788229301823
+      },
+      "bootstrap": {
+        "resamples": 10000,
+        "block_length": 20,
+        "ci95": [
+          0.13341367637577184,
+          1.4924286985174875
+        ],
+        "probability_positive": 0.9915
+      },
+      "strict_supported": true,
+      "holm_adjusted_p_across_six_baselines": 0.12158203125
+    }
+  },
+  "source_lock_hashes": {
+    "stage_b": "128e7ddad02aa86363d7bcb66d0067bd9dcf8366e0b26661313038d85a7d84da"
+  },
+  "caveats": [
+    "Traditional rule parameters are canonical pre-specified values, not test-tuned optima.",
+    "Deterministic strategies contribute one result per dataset-window cell.",
+    "D1 and D2 share three stocks and rolling windows overlap.",
+    "Holm adjustment is applied across all six baselines separately for each GIFT anchor."
+  ]
+}

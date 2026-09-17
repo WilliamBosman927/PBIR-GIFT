@@ -1,0 +1,37 @@
+﻿method,method_label,dataset,window,n_seed_runs,mean_sharpe,seed_sd_sharpe
+gift_stage_b,Pure GIFT (Stage B pipeline),portfolio_5stocks,W1,3,0.11428865807050488,0.3533034631852838
+gift_stage_b,Pure GIFT (Stage B pipeline),portfolio_5stocks,W3,3,-1.4390341722306295,0.23668513194642185
+gift_stage_b,Pure GIFT (Stage B pipeline),portfolio_5stocks,W5,3,2.8728889591093014,0.3887971811508768
+gift_stage_b,Pure GIFT (Stage B pipeline),portfolio_5stocks2,W1,3,2.7931757746899772,0.21974339270406537
+gift_stage_b,Pure GIFT (Stage B pipeline),portfolio_5stocks2,W3,3,-0.42066916013120226,0.22129480909168817
+gift_stage_b,Pure GIFT (Stage B pipeline),portfolio_5stocks2,W5,3,1.866506698334178,0.8573637369345167
+pbir_stage_c,PBIR-GIFT (Stage C fixed code),portfolio_5stocks,W1,3,0.19057211549430417,0.2134957289728043
+pbir_stage_c,PBIR-GIFT (Stage C fixed code),portfolio_5stocks,W3,3,-1.160468981952879,0.23767194044668744
+pbir_stage_c,PBIR-GIFT (Stage C fixed code),portfolio_5stocks,W5,3,2.7476763818131835,0.539422504721831
+pbir_stage_c,PBIR-GIFT (Stage C fixed code),portfolio_5stocks2,W1,3,2.6911533783643264,0.20457845286574133
+pbir_stage_c,PBIR-GIFT (Stage C fixed code),portfolio_5stocks2,W3,3,-0.1541383522274237,0.5512250311361427
+pbir_stage_c,PBIR-GIFT (Stage C fixed code),portfolio_5stocks2,W5,3,1.8099339058662949,0.3043333557175226
+gift_stage_c,Pure GIFT (Stage C fixed code),portfolio_5stocks,W1,3,0.25236624516445505,0.13865129071277416
+gift_stage_c,Pure GIFT (Stage C fixed code),portfolio_5stocks,W3,3,-1.4120612242806807,0.34036997164072247
+gift_stage_c,Pure GIFT (Stage C fixed code),portfolio_5stocks,W5,3,2.234624261020979,0.6049346476176876
+gift_stage_c,Pure GIFT (Stage C fixed code),portfolio_5stocks2,W1,3,2.0496413726267217,0.31733185519054913
+gift_stage_c,Pure GIFT (Stage C fixed code),portfolio_5stocks2,W3,3,-0.6792362371375743,0.7279744570576034
+gift_stage_c,Pure GIFT (Stage C fixed code),portfolio_5stocks2,W5,3,1.4697656459261672,0.7731140634180141
+ppo_train_plus_test,PPO (train + fine-tune),portfolio_5stocks,W1,3,-0.22867417729047013,0.4759083121458179
+ppo_train_plus_test,PPO (train + fine-tune),portfolio_5stocks,W3,3,-1.4964865373951095,0.2253166955158261
+ppo_train_plus_test,PPO (train + fine-tune),portfolio_5stocks,W5,3,2.7322995556274776,1.0632045492477293
+ppo_train_plus_test,PPO (train + fine-tune),portfolio_5stocks2,W1,3,2.219482685875595,1.8686680582641004
+ppo_train_plus_test,PPO (train + fine-tune),portfolio_5stocks2,W3,3,-0.9705982885665801,0.33676114407998853
+ppo_train_plus_test,PPO (train + fine-tune),portfolio_5stocks2,W5,3,0.712372193976388,0.5566180138411303
+ppo_test_only,PPO (test-period training),portfolio_5stocks,W1,3,-0.6627430775023667,0.3380326672126718
+ppo_test_only,PPO (test-period training),portfolio_5stocks,W3,3,-1.1160238663536035,0.43801749452742095
+ppo_test_only,PPO (test-period training),portfolio_5stocks,W5,3,2.894455965041592,0.6799058133038238
+ppo_test_only,PPO (test-period training),portfolio_5stocks2,W1,3,2.573635040457249,0.3426908114076723
+ppo_test_only,PPO (test-period training),portfolio_5stocks2,W3,3,-0.4868416572978131,0.2330773128605615
+ppo_test_only,PPO (test-period training),portfolio_5stocks2,W5,3,0.7524634090673477,0.35099336772286616
+equal_weight,Equal Weight,portfolio_5stocks,W1,3,0.3970452335358103,0.0
+equal_weight,Equal Weight,portfolio_5stocks,W3,3,-1.318811415774874,0.0
+equal_weight,Equal Weight,portfolio_5stocks,W5,3,2.9493936187654,0.0
+equal_weight,Equal Weight,portfolio_5stocks2,W1,3,3.244651920953039,0.0
+equal_weight,Equal Weight,portfolio_5stocks2,W3,3,-0.4783454467141283,0.0
+equal_weight,Equal Weight,portfolio_5stocks2,W5,3,1.9235243326284184,2.7194799110210365e-16

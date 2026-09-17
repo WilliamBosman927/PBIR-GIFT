@@ -1,0 +1,23 @@
+{
+  "role": "exploratory_descriptive_cross_stage_comparison",
+  "stage_b": {
+    "mean_delta_sharpe": 0.05626194825261286,
+    "ci95": [
+      -0.33075682640879545,
+      0.3846946780370701
+    ]
+  },
+  "stage_c": {
+    "mean_delta_sharpe": 0.36827139733962294,
+    "ci95": [
+      -0.05278320870954665,
+      0.7850472454553507
+    ]
+  },
+  "stage_c_minus_stage_b_mean_delta": 0.31200944908701006,
+  "positive_cells": {
+    "stage_b": 3,
+    "stage_c": 5
+  },
+  "interpretation_constraint": "The stages reuse observed windows and differ in code-control design. The between-stage change is descriptive, not an independent causal effect or a new confirmatory test."
+}

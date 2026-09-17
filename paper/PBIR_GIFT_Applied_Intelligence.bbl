@@ -1,0 +1,247 @@
+\begin{thebibliography}{42}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{{#1}}
+\providecommand{\urlprefix}{URL }
+\providecommand{\doi}[1]{\url{https://doi.org/#1}}
+\providecommand{\eprint}[2][]{\url{#2}}
+ \bibcommenthead
+
+\bibitem[{Agarwal et~al.(2021)Agarwal, Schwarzer, Castro, Courville, and
+  Bellemare}]{ref33}
+Agarwal R, Schwarzer M, Castro PS, et~al (2021) Deep reinforcement learning at
+  the edge of the statistical precipice. In: Advances in Neural Information
+  Processing Systems,
+  \urlprefix\url{https://proceedings.neurips.cc/paper/2021/hash/f514cec81cb148559cf475e7426eed5e-Abstract.html}
+
+\bibitem[{Ariel(1987)}]{ref40}
+Ariel RA (1987) A monthly effect in stock returns. Journal of Financial
+  Economics 18(1):161--174. \doi{10.1016/0304-405X(87)90066-3},
+  \urlprefix\url{https://doi.org/10.1016/0304-405X(87)90066-3}
+
+\bibitem[{Bailey and L{\'o}pez~de Prado(2014)}]{ref42}
+Bailey DH, L{\'o}pez~de Prado M (2014) The deflated sharpe ratio: Correcting
+  for selection bias, backtest overfitting, and non-normality. The Journal of
+  Portfolio Management 40(5):94--107. \doi{10.3905/jpm.2014.40.5.094},
+  \urlprefix\url{https://doi.org/10.3905/jpm.2014.40.5.094}
+
+\bibitem[{Benhenda(2025)}]{ref20}
+Benhenda M (2025) {FinRL-DeepSeek}: {LLM}-infused risk-sensitive reinforcement
+  learning for trading agents.
+  \urlprefix\url{https://arxiv.org/abs/2502.07393},
+  {\href{https://arxiv.org/abs/2502.07393}{{arXiv:2502.07393}}}
+
+\bibitem[{Brock et~al.(1992)Brock, Lakonishok, and LeBaron}]{ref39}
+Brock W, Lakonishok J, LeBaron B (1992) Simple technical trading rules and the
+  stochastic properties of stock returns. The Journal of Finance
+  47(5):1731--1764. \doi{10.1111/j.1540-6261.1992.tb04681.x},
+  \urlprefix\url{https://doi.org/10.1111/j.1540-6261.1992.tb04681.x}
+
+\bibitem[{Chen and Guestrin(2016)}]{ref38}
+Chen T, Guestrin C (2016) {XGBoost}: A scalable tree boosting system. In:
+  Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge
+  Discovery and Data Mining, pp 785--794, \doi{10.1145/2939672.2939785},
+  \urlprefix\url{https://doi.org/10.1145/2939672.2939785}
+
+\bibitem[{Chen et~al.(2025)Chen, Yao, Liu, Ye, Yu, Hou, and Li}]{ref24}
+Chen Y, Yao Z, Liu Y, et~al (2025) {StockBench}: Can {LLM} agents trade stocks
+  profitably in real-world markets?
+  \urlprefix\url{https://arxiv.org/abs/2510.02209},
+  {\href{https://arxiv.org/abs/2510.02209}{{arXiv:2510.02209}}}
+
+\bibitem[{Darmanin and Vella(2025)}]{ref19}
+Darmanin A, Vella V (2025) Language model guided reinforcement learning in
+  quantitative trading. In: Proceedings of FLLM, pp 405--412
+
+\bibitem[{Golu{\v{z}}a et~al.(2024{\natexlab{a}})Golu{\v{z}}a,
+  Kova{\v{c}}evi{\'c}, Bauman, and Kostanj{\v{c}}ar}]{ref12}
+Golu{\v{z}}a S, Kova{\v{c}}evi{\'c} T, Bauman T, et~al (2024{\natexlab{a}})
+  Deep reinforcement learning with positional context for intraday trading.
+  Evolving Systems 15(5):1865--1880
+
+\bibitem[{Golu{\v{z}}a et~al.(2024{\natexlab{b}})Golu{\v{z}}a,
+  Kova{\v{c}}evi{\'c}, Begu{\v{s}}i{\'c}, and Kostanj{\v{c}}ar}]{ref15}
+Golu{\v{z}}a S, Kova{\v{c}}evi{\'c} T, Begu{\v{s}}i{\'c} S, et~al
+  (2024{\natexlab{b}}) Robot see, robot do: Imitation reward for noisy
+  financial environments. In: Proceedings of the IEEE International Conference
+  on Big Data, pp 4884--4891
+
+\bibitem[{Hambly et~al.(2023)Hambly, Xu, and Yang}]{ref7}
+Hambly B, Xu R, Yang H (2023) Recent advances in reinforcement learning in
+  finance. Mathematical Finance 33(3):437--503. \doi{10.1111/mafi.12382},
+  \urlprefix\url{https://doi.org/10.1111/mafi.12382}
+
+\bibitem[{Henderson et~al.(2018)Henderson, Islam, Bachman, Pineau, Precup, and
+  Meger}]{ref32}
+Henderson P, Islam R, Bachman P, et~al (2018) Deep reinforcement learning that
+  matters. Proceedings of the AAAI Conference on Artificial Intelligence
+  32(1):3207--3214. \doi{10.1609/aaai.v32i1.11694},
+  \urlprefix\url{https://doi.org/10.1609/aaai.v32i1.11694}
+
+\bibitem[{Holm(1979)}]{ref37}
+Holm S (1979) A simple sequentially rejective multiple test procedure.
+  Scandinavian Journal of Statistics 6(2):65--70. \doi{10.2307/4615733},
+  \urlprefix\url{https://doi.org/10.2307/4615733}
+
+\bibitem[{Jiang et~al.(2017)Jiang, Xu, and Liang}]{ref2}
+Jiang Z, Xu D, Liang J (2017) A deep reinforcement learning framework for the
+  financial portfolio management problem.
+  \urlprefix\url{https://arxiv.org/abs/1706.10059},
+  {\href{https://arxiv.org/abs/1706.10059}{{arXiv:1706.10059}}}
+
+\bibitem[{Karzanov et~al.(2025)Karzanov, Garz{\'o}n, Terekhov et~al.}]{ref16}
+Karzanov D, Garz{\'o}n R, Terekhov M, et~al (2025) Regret-optimized portfolio
+  enhancement through deep reinforcement learning and future-looking rewards.
+  In: Proceedings of the ACM International Conference on AI in Finance, pp
+  890--897
+
+\bibitem[{Lee et~al.(2020)Lee, Kim, Yi, and Kang}]{ref21}
+Lee J, Kim R, Yi SW, et~al (2020) {MAPS}: Multi-agent reinforcement
+  learning-based portfolio management system. In: Proceedings of the
+  Twenty-Ninth International Joint Conference on Artificial Intelligence, pp
+  4520--4526
+
+\bibitem[{Liang et~al.(2018)Liang, Chen, Zhu, Jiang, and Li}]{ref11}
+Liang Z, Chen H, Zhu J, et~al (2018) Adversarial deep reinforcement learning in
+  portfolio management. \urlprefix\url{https://arxiv.org/abs/1808.09940},
+  {\href{https://arxiv.org/abs/1808.09940}{{arXiv:1808.09940}}}
+
+\bibitem[{Lien et~al.(2023)Lien, Li, and Wang}]{ref14}
+Lien YH, Li YK, Wang YS (2023) Contrastive learning and reward smoothing for
+  deep portfolio management. In: Proceedings of the Thirty-Second International
+  Joint Conference on Artificial Intelligence, pp 3966--3974
+
+\bibitem[{Liu et~al.(2022)Liu, Xia, Rui, Gao, Yang, Zhu, Wang, Wang, and
+  Guo}]{ref9}
+Liu XY, Xia Z, Rui J, et~al (2022) {FinRL-Meta}: Market environments and
+  benchmarks for data-driven financial reinforcement learning. In: Advances in
+  Neural Information Processing Systems, \doi{10.52202/068431-0134},
+  \urlprefix\url{https://proceedings.neurips.cc/paper_files/paper/2022/hash/0bf54b80686d2c4dc0808c2e98d430f7-Abstract.html}
+
+\bibitem[{Moody and Saffell(2001)}]{ref1}
+Moody J, Saffell M (2001) Learning to trade via direct reinforcement. IEEE
+  Transactions on Neural Networks 12(4):875--889
+
+\bibitem[{Ng et~al.(1999)Ng, Harada, and Russell}]{ref30}
+Ng AY, Harada D, Russell S (1999) Policy invariance under reward
+  transformations: Theory and application to reward shaping. In: Proceedings of
+  the Sixteenth International Conference on Machine Learning, pp 278--287
+
+\bibitem[{Nie et~al.(2024)Nie, Kong, Dong et~al.}]{ref27}
+Nie Y, Kong Y, Dong X, et~al (2024) A survey of large language models for
+  financial applications: Progress, prospects and challenges.
+  \urlprefix\url{https://arxiv.org/abs/2406.11903},
+  {\href{https://arxiv.org/abs/2406.11903}{{arXiv:2406.11903}}}
+
+\bibitem[{Pippas et~al.(2025)Pippas, Turkay, and Ludvig}]{ref10}
+Pippas N, Turkay C, Ludvig EA (2025) The evolution of reinforcement learning in
+  quantitative finance: A survey. ACM Computing Surveys 57(11):1--51.
+  \doi{10.1145/3733714}, \urlprefix\url{https://doi.org/10.1145/3733714}
+
+\bibitem[{Politis and Romano(1992)}]{ref36}
+Politis DN, Romano JP (1992) A circular block-resampling procedure for
+  stationary data. In: LePage R, Billard L (eds) Exploring the Limits of
+  Bootstrap. Wiley, New York, p 263--270
+
+\bibitem[{Schulman et~al.(2015)Schulman, Moritz, Levine, Jordan, and
+  Abbeel}]{ref31}
+Schulman J, Moritz P, Levine S, et~al (2015) High-dimensional continuous
+  control using generalized advantage estimation.
+  \urlprefix\url{https://arxiv.org/abs/1506.02438},
+  {\href{https://arxiv.org/abs/1506.02438}{{arXiv:1506.02438}}}
+
+\bibitem[{Schulman et~al.(2017)Schulman, Wolski, Dhariwal, Radford, and
+  Klimov}]{ref8}
+Schulman J, Wolski F, Dhariwal P, et~al (2017) Proximal policy optimization
+  algorithms. \urlprefix\url{https://arxiv.org/abs/1707.06347},
+  {\href{https://arxiv.org/abs/1707.06347}{{arXiv:1707.06347}}}
+
+\bibitem[{Sharpe(1966)}]{ref34}
+Sharpe WF (1966) Mutual fund performance. The Journal of Business
+  39(S1):119--138. \doi{10.1086/294846},
+  \urlprefix\url{https://doi.org/10.1086/294846}
+
+\bibitem[{Sortino and van~der Meer(1991)}]{ref35}
+Sortino FA, van~der Meer R (1991) Downside risk: Capturing what's at stake in
+  investment situations. The Journal of Portfolio Management 17(4):27--31.
+  \doi{10.3905/jpm.1991.409343},
+  \urlprefix\url{https://doi.org/10.3905/jpm.1991.409343}
+
+\bibitem[{Sun et~al.(2023)Sun, Wang, and An}]{ref6}
+Sun S, Wang R, An B (2023) Reinforcement learning for quantitative trading. ACM
+  Transactions on Intelligent Systems and Technology 14(3):44:1--44:29.
+  \doi{10.1145/3582560}, \urlprefix\url{https://doi.org/10.1145/3582560}
+
+\bibitem[{Wang et~al.(2021)Wang, Huang, Tu, Zhang, and Xu}]{ref4}
+Wang Z, Huang B, Tu S, et~al (2021) {DeepTrader}: A deep reinforcement learning
+  approach for risk--return balanced portfolio management with market
+  conditions embedding. Proceedings of the AAAI Conference on Artificial
+  Intelligence 35(1):643--650. \doi{10.1609/aaai.v35i1.16144},
+  \urlprefix\url{https://doi.org/10.1609/aaai.v35i1.16144}
+
+\bibitem[{White(2000)}]{ref41}
+White H (2000) A reality check for data snooping. Econometrica
+  68(5):1097--1126. \doi{10.1111/1468-0262.00152},
+  \urlprefix\url{https://doi.org/10.1111/1468-0262.00152}
+
+\bibitem[{Wu et~al.(2023)Wu, Irsoy, Lu et~al.}]{ref25}
+Wu S, Irsoy O, Lu S, et~al (2023) {BloombergGPT}: A large language model for
+  finance. \urlprefix\url{https://arxiv.org/abs/2303.17564},
+  {\href{https://arxiv.org/abs/2303.17564}{{arXiv:2303.17564}}}
+
+\bibitem[{Wu et~al.(2026)Wu, Zhang, Liu, Fang, Luan, Zhang, Liu, Zeng, Yu, Liu,
+  Du, Ni, and Li}]{ref29}
+Wu Y, Zhang B, Liu Y, et~al (2026) {GIFT}: {LLM}-guided state--reward interface
+  for financial reinforcement learning.
+  \urlprefix\url{https://arxiv.org/abs/2606.08450},
+  {\href{https://arxiv.org/abs/2606.08450}{{arXiv:2606.08450}}}
+
+\bibitem[{Xie et~al.(2024)Xie, Han, Chen et~al.}]{ref28}
+Xie Q, Han W, Chen Z, et~al (2024) {FinBen}: A holistic financial benchmark for
+  large language models. In: Advances in Neural Information Processing Systems
+
+\bibitem[{Xiong et~al.(2025)Xiong, Deng, Wang et~al.}]{ref18}
+Xiong G, Deng Z, Wang K, et~al (2025) {FLAG-Trader}: Fusion {LLM}-agent with
+  gradient-based reinforcement learning for financial trading.
+  \urlprefix\url{https://arxiv.org/abs/2502.11433},
+  {\href{https://arxiv.org/abs/2502.11433}{{arXiv:2502.11433}}}
+
+\bibitem[{Xu et~al.(2020)Xu, Zhang, Ye, Zhao, and Tan}]{ref3}
+Xu K, Zhang Y, Ye D, et~al (2020) Relation-aware transformer for portfolio
+  policy learning. In: Proceedings of the Twenty-Ninth International Joint
+  Conference on Artificial Intelligence, pp 4647--4653,
+  \doi{10.24963/ijcai.2020/641},
+  \urlprefix\url{https://doi.org/10.24963/ijcai.2020/641}
+
+\bibitem[{Yang et~al.(2023)Yang, Liu, and Wang}]{ref26}
+Yang H, Liu XY, Wang CD (2023) {FinGPT}: Open-source financial large language
+  models. \urlprefix\url{https://arxiv.org/abs/2306.06031},
+  {\href{https://arxiv.org/abs/2306.06031}{{arXiv:2306.06031}}}
+
+\bibitem[{Yang et~al.(2022)Yang, Zheng, Liang, Han, and Zhu}]{ref5}
+Yang M, Zheng X, Liang Q, et~al (2022) A smart trader for portfolio management
+  based on normalizing flows. In: Proceedings of the Thirty-First International
+  Joint Conference on Artificial Intelligence, pp 4014--4021,
+  \doi{10.24963/ijcai.2022/557},
+  \urlprefix\url{https://doi.org/10.24963/ijcai.2022/557}
+
+\bibitem[{Yu et~al.(2024)Yu, Yao, Li et~al.}]{ref17}
+Yu Y, Yao Z, Li H, et~al (2024) {FinCon}: A synthesized {LLM} multi-agent
+  system with conceptual verbal reinforcement for enhanced financial decision
+  making. In: Advances in Neural Information Processing Systems
+
+\bibitem[{Zhang et~al.(2025)Zhang, Yoshie, Sun, and Huang}]{ref23}
+Zhang K, Yoshie O, Sun L, et~al (2025) {FinLLM-B}: When large language models
+  meet financial breakout trading. In: Proceedings of the NAACL Industry Track,
+  pp 349--357
+
+\bibitem[{Zhao et~al.(2023)Zhao, Kong, and Shen}]{ref22}
+Zhao L, Kong S, Shen Y (2023) {DoubleAdapt}: A meta-learning approach to
+  incremental learning for stock trend forecasting. In: Proceedings of the ACM
+  SIGKDD Conference on Knowledge Discovery and Data Mining, pp 3492--3503
+
+\bibitem[{Zong et~al.(2024)Zong, Wang, Qin, Feng, Wang, and An}]{ref13}
+Zong C, Wang C, Qin M, et~al (2024) {MacroHFT}: Memory augmented context-aware
+  reinforcement learning on high-frequency trading. In: Proceedings of the ACM
+  SIGKDD Conference on Knowledge Discovery and Data Mining, pp 4712--4721
+
+\end{thebibliography}

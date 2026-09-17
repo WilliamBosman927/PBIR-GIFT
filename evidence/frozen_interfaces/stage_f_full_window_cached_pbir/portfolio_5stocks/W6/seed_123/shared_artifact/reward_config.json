@@ -1,0 +1,39 @@
+{
+  "feature_dim": 4,
+  "lambda": 0.6,
+  "rationale": "Frozen from the Stage-B PBIR train-selected best iteration; shared unchanged by PBIR-GIFT and Pure GIFT in the controlled replay.",
+  "reward_rules": [
+    {
+      "params": {
+        "max_weight": 0.4,
+        "penalty": 0.2
+      },
+      "rule": "penalize_concentration"
+    },
+    {
+      "params": {
+        "bonus": 0.1,
+        "min_stocks": 3,
+        "target_entropy": 1.5
+      },
+      "rule": "reward_diversification"
+    },
+    {
+      "params": {
+        "penalty": 0.12,
+        "threshold": 0.15
+      },
+      "rule": "penalize_turnover"
+    },
+    {
+      "params": {
+        "scale": 0.5,
+        "scale_factor": 0.7,
+        "vol_threshold": 0.5,
+        "volatility_threshold": 0.57
+      },
+      "rule": "volatility_scaling"
+    }
+  ],
+  "state_dim": 124
+}

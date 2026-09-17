@@ -1,0 +1,46 @@
+protocol:
+  name: stage-h-traditional-baseline-specification
+  version: 1
+  status: prospective_supplement_after_stage_f
+  declared_primary_representatives: [sma, bollinger, xgboost]
+  declared_supplementary_methods: [wma, atr, turn_of_month]
+  note: >-
+    All six methods are reported. The primary representatives were selected by
+    method family before observing any local Stage-H test result.
+
+portfolio:
+  weight_mapping: positive_signal_normalization
+  no_positive_signal: all_cash
+  long_only: true
+  cash_allowed: true
+  rebalance_frequency: daily
+
+methods:
+  sma:
+    short_window: 20
+    long_window: 60
+  wma:
+    short_window: 20
+    long_window: 60
+  atr:
+    atr_window: 14
+    momentum_window: 20
+    minimum_score: 0.0
+  bollinger:
+    window: 20
+    standard_deviations: 2.0
+    mode: breakout
+    entry_z: 1.0
+  turn_of_month:
+    first_trading_days: 3
+    last_trading_days: 1
+  xgboost:
+    n_estimators: 200
+    max_depth: 3
+    learning_rate: 0.03
+    subsample: 0.8
+    colsample_bytree: 0.8
+    reg_lambda: 1.0
+    objective: reg:squarederror
+    n_jobs: 4
+    minimum_prediction: 0.0

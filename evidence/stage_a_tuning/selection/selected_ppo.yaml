@@ -1,0 +1,33 @@
+protocol:
+  name: two_stage_paired_evaluation
+  version: 1
+  stage: A_selected
+  selection_dataset: portfolio_5stocks
+  selection_window: D1-W1-internal-validation
+  validation_period:
+  - '2020-01-01'
+  - '2020-06-30'
+  selection_rule: Fixed-order sequential OFAT. For each five-level group, maximize
+    the mean held-out validation Sharpe of PBIR-GIFT and Pure GIFT, then freeze that
+    winner in every subsequent group. The final group therefore directly evaluates
+    the joint five-parameter setting.
+  parameter_order:
+  - epochs_per_update
+  - max_episodes
+  - actor_lr
+  - clip_epsilon
+  - entropy_coef
+  source_summary: ${PROJECT_ROOT}\results\stage_a_tuning\portfolio_5stocks\W1\seed_42\paired_sweep_summary.csv
+  source_config: ${PROJECT_ROOT}\config_tuning_D1_W1.yaml
+  requires_combined_confirmation: false
+  combined_confirmation:
+    status: embedded_in_sequential_ofat
+    final_group: entropy_coef
+    selected_level: 2
+ppo:
+  epochs_per_update: 10
+  max_episodes: 50
+  actor_lr: 0.0005
+  clip_epsilon: 0.3
+  entropy_coef: 0.001
+

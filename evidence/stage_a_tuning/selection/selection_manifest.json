@@ -1,0 +1,93 @@
+{
+  "name": "two_stage_paired_evaluation",
+  "version": 1,
+  "stage": "A_selected",
+  "selection_dataset": "portfolio_5stocks",
+  "selection_window": "D1-W1-internal-validation",
+  "validation_period": [
+    "2020-01-01",
+    "2020-06-30"
+  ],
+  "selection_rule": "Fixed-order sequential OFAT. For each five-level group, maximize the mean held-out validation Sharpe of PBIR-GIFT and Pure GIFT, then freeze that winner in every subsequent group. The final group therefore directly evaluates the joint five-parameter setting.",
+  "parameter_order": [
+    "epochs_per_update",
+    "max_episodes",
+    "actor_lr",
+    "clip_epsilon",
+    "entropy_coef"
+  ],
+  "source_summary": "${PROJECT_ROOT}\\results\\stage_a_tuning\\portfolio_5stocks\\W1\\seed_42\\paired_sweep_summary.csv",
+  "source_config": "${PROJECT_ROOT}\\config_tuning_D1_W1.yaml",
+  "requires_combined_confirmation": false,
+  "combined_confirmation": {
+    "status": "embedded_in_sequential_ofat",
+    "final_group": "entropy_coef",
+    "selected_level": 2
+  },
+  "selected_ppo": {
+    "epochs_per_update": 10,
+    "max_episodes": 50,
+    "actor_lr": 0.0005,
+    "clip_epsilon": 0.3,
+    "entropy_coef": 0.001
+  },
+  "selected_rows": {
+    "epochs_per_update": {
+      "parameter": "epochs_per_update",
+      "level": 5,
+      "value": 10,
+      "pbir_validation_sharpe": 2.4753986659918357,
+      "pure_gift_validation_sharpe": 2.661133044737445,
+      "mean_validation_sharpe": 2.5682658553646402,
+      "mean_validation_sortino": 2.0919311644809033,
+      "mean_validation_total_return": 9.509725647582101,
+      "mean_validation_max_drawdown": 4.514040784398138
+    },
+    "max_episodes": {
+      "parameter": "max_episodes",
+      "level": 3,
+      "value": 50,
+      "pbir_validation_sharpe": 2.8110972582013987,
+      "pure_gift_validation_sharpe": 1.995729938003548,
+      "mean_validation_sharpe": 2.4034135981024733,
+      "mean_validation_sortino": 2.011749978353859,
+      "mean_validation_total_return": 8.892691941109277,
+      "mean_validation_max_drawdown": 4.4859447670829855
+    },
+    "actor_lr": {
+      "parameter": "actor_lr",
+      "level": 4,
+      "value": 0.0005,
+      "pbir_validation_sharpe": 2.203617911416242,
+      "pure_gift_validation_sharpe": 3.8765755094816083,
+      "mean_validation_sharpe": 3.040096710448925,
+      "mean_validation_sortino": 2.6247697630118867,
+      "mean_validation_total_return": 12.18025328797342,
+      "mean_validation_max_drawdown": 3.72618056008802
+    },
+    "clip_epsilon": {
+      "parameter": "clip_epsilon",
+      "level": 5,
+      "value": 0.3,
+      "pbir_validation_sharpe": 3.103073287224244,
+      "pure_gift_validation_sharpe": 3.469891919635774,
+      "mean_validation_sharpe": 3.286482603430009,
+      "mean_validation_sortino": 3.0312430268295234,
+      "mean_validation_total_return": 15.08144842030651,
+      "mean_validation_max_drawdown": 5.09561860769854
+    },
+    "entropy_coef": {
+      "parameter": "entropy_coef",
+      "level": 2,
+      "value": 0.001,
+      "pbir_validation_sharpe": 2.564712929754908,
+      "pure_gift_validation_sharpe": 4.523921039378693,
+      "mean_validation_sharpe": 3.5443169845668003,
+      "mean_validation_sortino": 3.537198149748452,
+      "mean_validation_total_return": 19.17981026221681,
+      "mean_validation_max_drawdown": 5.486165654178525
+    }
+  },
+  "candidate_score_table": "${PROJECT_ROOT}\\results\\stage_a_tuning\\portfolio_5stocks\\W1\\seed_42\\selection\\selection_scores.csv",
+  "selected_artifact": "${PROJECT_ROOT}\\results\\stage_a_tuning\\portfolio_5stocks\\W1\\seed_42\\selection\\selected_ppo.yaml"
+}
